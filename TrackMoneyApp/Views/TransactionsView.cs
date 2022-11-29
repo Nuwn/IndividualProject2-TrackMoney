@@ -20,6 +20,8 @@ namespace TrackMoney.TrackMoneyApp.Views
         public DateTime DateEnd { get; set; } = DateTime.MaxValue;
 
         public TransactionViewSettings(){}
+
+        // Decided not to add constructor with parameters, it's a bit easier to see what's being overrided without it.
     }
 
 
@@ -110,8 +112,8 @@ namespace TrackMoney.TrackMoneyApp.Views
                 "(ESC) Return.").Show();
 
             InputController.AwaitKeyCommand(
-                ((ConsoleKey command, Action callback))(ConsoleKey.D1, () =>
-                { // Show all
+                ((ConsoleKey command, Action callback))(ConsoleKey.D1, () => // Show all
+                { 
                     Load(new()
                     {
                         Selection = Selection.Any,
@@ -128,8 +130,8 @@ namespace TrackMoney.TrackMoneyApp.Views
                         SortDirection = settings.SortDirection,
                     });
                 }),
-                ((ConsoleKey command, Action callback))(ConsoleKey.D2, () =>
-                { // Show Incomes
+                ((ConsoleKey command, Action callback))(ConsoleKey.D2, () => // Show Incomes
+                { 
                     Load(new()
                     {
                         Selection = Selection.Incomes,
@@ -150,8 +152,8 @@ namespace TrackMoney.TrackMoneyApp.Views
                         DateEnd = settings.DateEnd,
                     });
                 }),
-                ((ConsoleKey command, Action callback))(ConsoleKey.D3, () =>
-                { // Show Expenses
+                ((ConsoleKey command, Action callback))(ConsoleKey.D3, () => // Show Expenses
+                { 
                     Load(new()
                     {
                         Selection = Selection.Expenses,
@@ -233,52 +235,22 @@ namespace TrackMoney.TrackMoneyApp.Views
 
             TransactionSorting tSort = TransactionSorting.Date;
             InputController.AwaitKeyCommand(
-                (ConsoleKey.D1, () =>
-                {
-                    tSort = TransactionSorting.Title;
-                }),
-                (ConsoleKey.D2, () =>
-                {
-                    tSort = TransactionSorting.Amount;
-                }),
-                (ConsoleKey.D3, () =>
-                {
-                    tSort = TransactionSorting.Date;
-                }),
-                (ConsoleKey.NumPad1, () =>
-                {
-                    tSort = TransactionSorting.Title;
-                }),
-                (ConsoleKey.NumPad2, () =>
-                {
-                    tSort = TransactionSorting.Amount;
-                }),
-                (ConsoleKey.NumPad3, () =>
-                {
-                    tSort = TransactionSorting.Date;
-                })
+                (ConsoleKey.D1, () => tSort = TransactionSorting.Title),
+                (ConsoleKey.D2, () => tSort = TransactionSorting.Amount),
+                (ConsoleKey.D3, () => tSort = TransactionSorting.Date),
+                (ConsoleKey.NumPad1, () => tSort = TransactionSorting.Title),
+                (ConsoleKey.NumPad2, () => tSort = TransactionSorting.Amount),
+                (ConsoleKey.NumPad3, () => tSort = TransactionSorting.Date)
             );
 
             ConsoleText.Get.LinedMessage("(1) Ascending", "(2) Descending").Show();
 
             SortDirection sortDir = SortDirection.Descending;
             InputController.AwaitKeyCommand(
-                (ConsoleKey.D1, () =>
-                {
-                    sortDir = SortDirection.Ascending;
-                }),
-                (ConsoleKey.D2, () =>
-                {
-                    sortDir = SortDirection.Descending;
-                }),
-                (ConsoleKey.NumPad1, () =>
-                {
-                    sortDir = SortDirection.Ascending;
-                }),
-                (ConsoleKey.NumPad2, () =>
-                {
-                    sortDir = SortDirection.Descending;
-                })
+                (ConsoleKey.D1, () => sortDir = SortDirection.Ascending),
+                (ConsoleKey.D2, () => sortDir = SortDirection.Descending),
+                (ConsoleKey.NumPad1, () => sortDir = SortDirection.Ascending),
+                (ConsoleKey.NumPad2, () => sortDir = SortDirection.Descending)
             );
 
             Load(new TransactionViewSettings()
