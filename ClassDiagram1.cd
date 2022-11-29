@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TrackMoney.TrackMoneyApp.TrackMoneyApp">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\TrackMoneyApp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackMoney.TrackMoneyApp.Account" Collapsed="true">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASABIAAACAAEABAAAAAAAAAAQAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackMoney.TrackMoneyApp.Views.CreationView" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\Views\CreationView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackMoney.TrackMoneyApp.Views.StartView" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\Views\StartView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackMoney.TrackMoneyApp.Views.TransactionsView" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAAAAAAAAgAEAAAAABAAABAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\Views\TransactionsView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackMoney.TrackMoneyApp.Items.ConsoleText" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAEQAEAAKAhAAAoAAAACA=</HashCode>
+      <FileName>TrackMoneyApp\Items\ConsoleText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrackMoney.TrackMoneyApp.Controllers.InputController" Collapsed="true">
+    <Position X="18.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAQAAAEAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\Controllers\InputController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveSystem.SaveManager" Collapsed="true">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAQAAAAAAAAABAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>SaveSystem\SaveManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="TrackMoney.TrackMoneyApp.Views.TransactionViewSettings" Collapsed="true">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAQAA=</HashCode>
+      <FileName>TrackMoneyApp\Views\TransactionsView.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TrackMoney.TrackMoneyApp.Items.Transaction" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAACAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\Items\Transaction.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="TrackMoney.TrackMoneyApp.Views.SortDirection" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\Views\TransactionsView.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TrackMoney.TrackMoneyApp.Views.TransactionSorting" Collapsed="true">
+    <Position X="5.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAACAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\Views\TransactionsView.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TrackMoney.TrackMoneyApp.Views.Selection" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAA=</HashCode>
+      <FileName>TrackMoneyApp\Views\TransactionsView.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
