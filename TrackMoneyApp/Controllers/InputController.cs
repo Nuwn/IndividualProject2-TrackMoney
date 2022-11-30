@@ -9,12 +9,19 @@ namespace TrackMoney.TrackMoneyApp.Controllers
     /// </summary>
     public static class InputController
     {
+        /// <summary>
+        /// Simply awaits for a text input and then calls the watching callback
+        /// e.g: user writes "blue" and we have registeded blue as a command, it will be called.
+        /// </summary>
         public static void AwaitTextCommand(params (string command, Action callback)[] commands)
         {
             string? input = Console.ReadLine();
             commands.FirstOrDefault((x) => x.command.ToLower() == input?.ToLower()).callback?.Invoke();
         }
 
+        /// <summary>
+        /// Awaits a single key, then matches it to registred commands, if found, call the callback.
+        /// </summary>
         public static void AwaitKeyCommand(params (ConsoleKey command, Action callback)[] commands)
         {
             ConsoleKeyInfo? input;
@@ -41,6 +48,11 @@ namespace TrackMoney.TrackMoneyApp.Controllers
             Callback?.Invoke(key);
         }
 
+        /// <summary>
+        /// Awaits a single text input, e.g you ask user to type a search query. 
+        /// </summary>
+        /// <param name="Callback">Callback that returns the string typed</param>
+        /// <param name="predicate">Validator, if true, callback will be called.</param>
         public static void AwaitTextInput(Action<string?> Callback, Func<string, bool>? predicate = null)
         {
             string? str;
@@ -50,11 +62,6 @@ namespace TrackMoney.TrackMoneyApp.Controllers
             while (predicate != null && !predicate(str ?? string.Empty));
 
             Callback?.Invoke(str);
-        }
-
-        internal static void AwaitKeyCommand(object value1, object value2, object value3, object value4)
-        {
-            throw new NotImplementedException();
         }
     }
 
